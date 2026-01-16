@@ -1,7 +1,7 @@
 import React from 'react';
 import Features from './Features';
 import '../styles/hero.css';
-import HeroImg from '../assets/hero-image.png';
+import HeroImg from '../assets/coffe.png';
 
 const Hero: React.FC = () => {
     return (
