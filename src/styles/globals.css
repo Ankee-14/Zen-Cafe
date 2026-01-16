@@ -1,0 +1,267 @@
+/* ===== CSS Design Tokens ===== */
+:root {
+    /* Colors - Deep Navy Blue Theme (matching reference) */
+    --color-bg-dark: #0a1628;
+    --color-bg-primary: #0d1c33;
+    --color-bg-secondary: #102542;
+
+    /* Wave/Accent Colors */
+    --color-wave-dark: #1a3a5c;
+    --color-wave-medium: #2d5a7b;
+    --color-wave-light: #3d7a9c;
+    --color-accent-cyan: #38b6d6;
+    --color-accent-teal: #2dd4bf;
+    --color-accent-glow: #5bcefa;
+
+    /* Gold/Orange Accent */
+    --color-gold: #c4956a;
+    --color-gold-light: #d4a574;
+
+    /* Glass Effect */
+    --glass-bg: rgba(13, 28, 51, 0.85);
+    --glass-bg-light: rgba(20, 40, 70, 0.6);
+    --glass-border: rgba(70, 130, 180, 0.2);
+    --glass-border-light: rgba(100, 160, 210, 0.12);
+    --glass-blur: blur(20px);
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-muted: rgba(255, 255, 255, 0.45);
+
+    /* Shadows */
+    --shadow-soft: 0 25px 80px rgba(0, 0, 0, 0.5);
+    --shadow-glow-cyan: 0 0 30px rgba(56, 182, 214, 0.3);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+    --radius-xl: 40px;
+    --radius-pill: 50px;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 20px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-2xl: 64px;
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Outfit', 'Inter', sans-serif;
+
+    --font-size-xs: 0.7rem;
+    --font-size-sm: 0.8rem;
+    --font-size-base: 0.95rem;
+    --font-size-lg: 1.1rem;
+    --font-size-xl: 1.4rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.75rem;
+    --font-size-hero: clamp(2.8rem, 5vw, 4rem);
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ===== Global Reset & Base ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+    background: var(--color-bg-dark);
+    height: 100vh;
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+/* ===== Background with Gradient & Flowing Waves ===== */
+.app-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg,
+            var(--color-bg-dark) 0%,
+            var(--color-bg-primary) 50%,
+            var(--color-bg-secondary) 100%);
+    overflow: hidden;
+}
+
+/* Large Flowing Wave Shapes - Matching Reference */
+.wave-shape {
+    position: absolute;
+    border-radius: 50% 50% 50% 50%;
+}
+
+.wave-shape-1 {
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(135deg, var(--color-wave-dark) 0%, transparent 60%);
+    top: -300px;
+    right: -200px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    opacity: 0.8;
+}
+
+.wave-shape-2 {
+    width: 900px;
+    height: 700px;
+    background: linear-gradient(180deg, var(--color-wave-medium) 0%, transparent 70%);
+    top: 10%;
+    right: -150px;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    opacity: 0.5;
+}
+
+.wave-shape-3 {
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(160deg, var(--color-wave-light) 0%, transparent 60%);
+    bottom: -200px;
+    left: -150px;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    opacity: 0.45;
+}
+
+.wave-shape-4 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(56, 182, 214, 0.15) 0%, transparent 70%);
+    top: 40%;
+    right: 5%;
+    filter: blur(60px);
+}
+
+.wave-shape-5 {
+    width: 400px;
+    height: 600px;
+    background: linear-gradient(200deg, var(--color-wave-dark) 0%, transparent 50%);
+    bottom: -100px;
+    right: 20%;
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+    opacity: 0.6;
+}
+
+/* ===== Utilities ===== */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+}
+
+.glass-card {
+    background: var(--glass-bg-light);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border-light);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* ===== App Container Layout ===== */
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: var(--spacing-md);
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.main-panel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    max-height: 95vh;
+    transform: rotateY(-3deg) rotateX(1.5deg);
+    transform-style: preserve-3d;
+    transition: transform var(--transition-slow);
+    overflow: hidden;
+}
+
+.main-panel:hover {
+    transform: rotateY(-1.5deg) rotateX(0.75deg);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 1024px) {
+    .app-container {
+        padding: var(--spacing-sm);
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .main-panel {
+        transform: none;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        padding: var(--spacing-xs);
+    }
+
+    .wave-shape-1,
+    .wave-shape-2 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .wave-shape-3,
+    .wave-shape-5 {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        padding: 4px;
+    }
+
+    .wave-shape-1,
+    .wave-shape-2,
+    .wave-shape-3,
+    .wave-shape-4,
+    .wave-shape-5 {
+        opacity: 0.3;
+    }
+}
