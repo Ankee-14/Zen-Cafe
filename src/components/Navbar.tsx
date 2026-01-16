@@ -13,7 +13,7 @@ const navLinks: NavLink[] = [
   { label: 'Menu', href: '/menu' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Order', href: '#order', isHighlight: true },
+  { label: 'Order Now', href: '#order', isHighlight: true },
 ];
 
 const Navbar: React.FC = () => {
