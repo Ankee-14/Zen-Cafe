@@ -8,11 +8,11 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: 'Scole', href: '#' },
-  { label: 'Dormis', href: '#menu' },
-  { label: 'Salestrio', href: '#about' },
-  { label: 'Cotta', href: '#contact' },
-  { label: 'Galato', href: '#order', isHighlight: true },
+  { label: 'Home', href: '#' },
+  { label: 'Menu', href: '#menu' },
+  { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#contact' },
+  { label: 'Order Now', href: '#order', isHighlight: true },
 ];
 
 const Navbar: React.FC = () => {

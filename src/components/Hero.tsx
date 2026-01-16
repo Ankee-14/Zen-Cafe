@@ -8,22 +8,22 @@ const Hero: React.FC = () => {
         <section className="hero">
             {/* Left Content */}
             <div className="hero-content">
-                <h1 className="hero-title">Coffee Shop</h1>
-                <p className="hero-subtitle">OUR OFF RE CCAES</p>
+                <h1 className="hero-title">Zen Cafe</h1>
+                <p className="hero-subtitle">OUR BEST COFFEES</p>
 
                 <p className="hero-description">
-                    Cof, ef tee o er prepenindimerd gelencrionn plerter seney treidensialey
-                    yolery sercurcated.cotes leefyticey seney holetivereys geten steindian wis
-                    keccole.tes poreent for tae taleutcer tee troperlefence telesteidens.
+                    Our premium coffee is sourced from the finest plantations around the world. Carefully selected,
+                    roasted to perfection, and crafted with passion. Every sip delivers an exceptional taste experience
+                    that coffee lovers truly appreciate.
                 </p>
 
                 {/* Category Tabs */}
                 <div className="hero-categories">
                     <button className="category-tab active">
-                        Bonis
+                        Espresso
                     </button>
                     <button className="category-tab category-tab--accent">
-                        Ccololois
+                        Cappuccino
                     </button>
                 </div>
 
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
                 {/* CTA Button */}
                 <div className="hero-cta">
                     <button className="hero-cta-button">
-                        <span>Save Bexro</span>
+                        <span>Explore Menu</span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
                 {/* Footer */}
                 <div className="hero-footer">
                     <div className="hero-footer-logo">☕</div>
-                    <span className="hero-footer-text">Stees ore Mortider ohenpripleis</span>
+                    <span className="hero-footer-text">Freshly Brewed Premium Coffee</span>
                 </div>
             </div>
 

@@ -10,18 +10,18 @@ interface Feature {
 const features: Feature[] = [
     {
         icon: '☕',
-        title: 'Daerier',
-        description: 'Lorem ore catanee meren infegente getdinberg',
+        title: 'Premium Quality',
+        description: 'Sourced from the finest coffee plantations worldwide',
     },
     {
         icon: '🍵',
-        title: 'Choole',
-        description: 'oletched ors cateron of lore! celenon etebening',
+        title: 'Expert Brewing',
+        description: 'Expertly brewed to perfection for the best taste experience',
     },
     {
         icon: '⚡',
-        title: 'Senst gürtj',
-        description: 'cheprossilerimera chrepredentin fiercele ot prieticle',
+        title: 'Fast Service',
+        description: 'Quick and efficient service without compromising quality',
     },
 ];
 
