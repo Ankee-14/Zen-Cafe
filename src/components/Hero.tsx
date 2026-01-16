@@ -1,6 +1,7 @@
 import React from 'react';
 import Features from './Features';
 import '../styles/hero.css';
+import HeroImg from '../assets/hero-image.png';
 
 const Hero: React.FC = () => {
     return (
@@ -75,7 +76,7 @@ const Hero: React.FC = () => {
 
                     {/* Coffee Cup Image */}
                     <img
-                        src="src/assets/coffe.png"
+                        src={HeroImg}
                         alt="Iced Coffee with chocolate topping"
                         className="hero-product-image"
                         onError={(e) => {

@@ -5,7 +5,7 @@
     gap: var(--spacing-md);
     padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* ===== Hero Left Content ===== */
@@ -137,7 +137,7 @@
 .hero-product-wrapper {
     position: absolute;
     top: 50%;
-    right: -60px;
+    right: -40px;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
@@ -212,29 +212,6 @@
     object-fit: contain;
     /* Flip horizontally and slight rotation for dynamic angle */
     transform: scaleX(-1) rotate(-5deg);
-    /* Smooth gradient mask - fades on bottom and right edges for premium blend */
-    -webkit-mask-image:
-        linear-gradient(to bottom,
-            black 0%,
-            black 60%,
-            rgba(0, 0, 0, 0.7) 75%,
-            rgba(0, 0, 0, 0.3) 88%,
-            transparent 100%),
-        linear-gradient(to left,
-            black 0%,
-            black 70%,
-            rgba(0, 0, 0, 0.5) 85%,
-            transparent 100%);
-    -webkit-mask-composite: source-in;
-    mask-image:
-        linear-gradient(to bottom,
-            black 0%,
-            black 60%,
-            rgba(0, 0, 0, 0.7) 75%,
-            rgba(0, 0, 0, 0.3) 88%,
-            transparent 100%);
-    mask-composite: intersect;
-    /* Drop-shadow for depth */
     filter:
         drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4)) drop-shadow(0 40px 70px rgba(0, 0, 0, 0.25));
     transition: transform var(--transition-slow), filter var(--transition-base);
