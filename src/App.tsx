@@ -1,5 +1,9 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import MenuPage from './pages/MenuPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 import './styles/globals.css';
 
 const App: React.FC = () => {
@@ -16,7 +20,12 @@ const App: React.FC = () => {
 
       {/* Main Content Container */}
       <div className="container app-container">
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
       </div>
     </>
   );

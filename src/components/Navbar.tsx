@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
 
 interface NavLink {
@@ -8,17 +9,17 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: 'Home', href: '#' },
-  { label: 'Menu', href: '#menu' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
-  { label: 'Order Now', href: '#order', isHighlight: true },
+  { label: 'Home', href: '/' },
+  { label: 'Menu', href: '/menu' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Order', href: '#order', isHighlight: true },
 ];
 
 const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
-      <a href="/" className="navbar-brand">
+      <Link to="/" className="navbar-brand">
         <div className="navbar-brand-logo">
           <svg
             viewBox="0 0 24 24"
@@ -32,17 +33,27 @@ const Navbar: React.FC = () => {
             <circle cx="12" cy="12" r="3" />
           </svg>
         </div>
-      </a>
+      </Link>
 
       <div className="navbar-nav">
         {navLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            className={`nav-link ${link.isHighlight ? 'nav-link--highlight' : ''}`}
-          >
-            {link.label}
-          </a>
+          link.href.startsWith('/') ? (
+            <Link
+              key={link.label}
+              to={link.href}
+              className={`nav-link ${link.isHighlight ? 'nav-link--highlight' : ''}`}
+            >
+              {link.label}
+            </Link>
+          ) : (
+            <a
+              key={link.label}
+              href={link.href}
+              className={`nav-link ${link.isHighlight ? 'nav-link--highlight' : ''}`}
+            >
+              {link.label}
+            </a>
+          )
         ))}
       </div>
 
@@ -63,7 +74,7 @@ const Navbar: React.FC = () => {
           </svg>
         </button>
       </div>
-    </nav>
+    </nav >
   );
 };
 
