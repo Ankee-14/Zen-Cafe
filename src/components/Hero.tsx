@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         <section className="hero">
             {/* Left Content */}
             <div className="hero-content">
-                <h1 className="hero-title">Coffee Shop</h1>
+                <h1 className="hero-title">Zen Cafe</h1>
                 <p className="hero-subtitle">OUR OFF RE CCAES</p>
 
                 <p className="hero-description">

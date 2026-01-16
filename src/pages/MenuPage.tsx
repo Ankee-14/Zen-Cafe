@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import '../styles/menu.css';
 
+import MenuImage1 from '../assets/espresso.jpg';
+import MenuImage2 from '../assets/cappuccino.jpg';
+import MenuImage3 from '../assets/Caramel.jpg';
+import MenuImage4 from '../assets/coldbrew.jpg';
+
+import ShakeImage1 from '../assets/shake.jpg';
+
 type Category = 'Coffee' | 'Shakes' | 'Desserts' | 'Specials';
 
 interface MenuItem {
@@ -10,31 +17,30 @@ interface MenuItem {
     name: string;
     description: string;
     category: Category;
+    image?: string;
 }
 
 const menuItems: MenuItem[] = [
     // Coffee
-    { id: 1, name: 'Espresso', description: 'Rich and bold single shot of pure coffee essence', category: 'Coffee' },
-    { id: 2, name: 'Cappuccino', description: 'Creamy foam meets espresso perfection', category: 'Coffee' },
-    { id: 3, name: 'Caramel Latte', description: 'Smooth latte with silky caramel swirl', category: 'Coffee' },
-    { id: 4, name: 'Cold Brew', description: 'Slow-steeped for 24 hours, served chilled', category: 'Coffee' },
-    { id: 5, name: 'Mocha', description: 'Chocolate and espresso in perfect harmony', category: 'Coffee' },
-    { id: 6, name: 'Americano', description: 'Bold espresso with hot water, classic style', category: 'Coffee' },
+    { id: 1, name: 'Espresso', description: 'Rich and bold single shot of pure coffee essence', category: 'Coffee', image: MenuImage1 },
+    { id: 2, name: 'Cappuccino', description: 'Creamy foam meets espresso perfection', category: 'Coffee', image: MenuImage2 },
+    { id: 3, name: 'Caramel Latte', description: 'Smooth latte with silky caramel swirl', category: 'Coffee', image: MenuImage3 },
+    { id: 4, name: 'Cold Brew', description: 'Slow-steeped for 24 hours, served chilled', category: 'Coffee', image: MenuImage4 },
     // Shakes
-    { id: 7, name: 'Chocolate Shake', description: 'Rich Belgian chocolate blended creamy', category: 'Shakes' },
-    { id: 8, name: 'Vanilla Bean', description: 'Madagascar vanilla in a creamy swirl', category: 'Shakes' },
-    { id: 9, name: 'Strawberry Dream', description: 'Fresh strawberries blended to perfection', category: 'Shakes' },
-    { id: 10, name: 'Oreo Blast', description: 'Crushed Oreos in a creamy milkshake', category: 'Shakes' },
+    { id: 7, name: 'Chocolate Shake', description: 'Rich Belgian chocolate blended creamy', category: 'Shakes', image: ShakeImage1 },
+    { id: 8, name: 'Vanilla Bean', description: 'Madagascar vanilla in a creamy swirl', category: 'Shakes', image: 'https://images.unsplash.com/photo-1553530666-ba2a8e36c6f4?w=200&h=200&fit=crop' },
+    { id: 9, name: 'Strawberry Dream', description: 'Fresh strawberries blended to perfection', category: 'Shakes', image: 'https://images.unsplash.com/photo-1568798839145-c28827b74a8f?w=200&h=200&fit=crop' },
+    { id: 10, name: 'Oreo Blast', description: 'Crushed Oreos in a creamy milkshake', category: 'Shakes', image: 'https://images.unsplash.com/photo-1579954614171-52a2c38c7c9b?w=200&h=200&fit=crop' },
     // Desserts
-    { id: 11, name: 'Tiramisu', description: 'Classic Italian layered coffee dessert', category: 'Desserts' },
-    { id: 12, name: 'Cheesecake', description: 'New York style with berry compote', category: 'Desserts' },
-    { id: 13, name: 'Chocolate Brownie', description: 'Warm fudge brownie with ice cream', category: 'Desserts' },
-    { id: 14, name: 'Creme Brulee', description: 'Caramelized custard, vanilla bean infused', category: 'Desserts' },
+    { id: 11, name: 'Tiramisu', description: 'Classic Italian layered coffee dessert', category: 'Desserts', image: 'https://images.unsplash.com/photo-1571115764595-644a007f0688?w=200&h=200&fit=crop' },
+    { id: 12, name: 'Cheesecake', description: 'New York style with berry compote', category: 'Desserts', image: 'https://images.unsplash.com/photo-1553134760-cd4628902467?w=200&h=200&fit=crop' },
+    { id: 13, name: 'Chocolate Brownie', description: 'Warm fudge brownie with ice cream', category: 'Desserts', image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=200&h=200&fit=crop' },
+    { id: 14, name: 'Creme Brulee', description: 'Caramelized custard, vanilla bean infused', category: 'Desserts', image: 'https://images.unsplash.com/photo-1470124266160-f8607ba8e38f?w=200&h=200&fit=crop' },
     // Specials
-    { id: 15, name: 'Zen Signature', description: 'Our secret blend with honey and spices', category: 'Specials' },
-    { id: 16, name: 'Matcha Latte', description: 'Premium Japanese green tea latte', category: 'Specials' },
-    { id: 17, name: 'Lavender Honey', description: 'Floral notes with natural honey sweetness', category: 'Specials' },
-    { id: 18, name: 'Affogato', description: 'Espresso poured over vanilla gelato', category: 'Specials' },
+    { id: 15, name: 'Zen Signature', description: 'Our secret blend with honey and spices', category: 'Specials', image: 'https://images.unsplash.com/photo-1537432376769-00f5c814b412?w=200&h=200&fit=crop' },
+    { id: 16, name: 'Matcha Latte', description: 'Premium Japanese green tea latte', category: 'Specials', image: 'https://images.unsplash.com/photo-1585518419759-fc0b0e86999a?w=200&h=200&fit=crop' },
+    { id: 17, name: 'Lavender Honey', description: 'Floral notes with natural honey sweetness', category: 'Specials', image: 'https://images.unsplash.com/photo-1577975080282-f4dccb496b60?w=200&h=200&fit=crop' },
+    { id: 18, name: 'Affogato', description: 'Espresso poured over vanilla gelato', category: 'Specials', image: 'https://images.unsplash.com/photo-1535920527078-e65faea4b9b9?w=200&h=200&fit=crop' },
 ];
 
 const categories: Category[] = ['Coffee', 'Shakes', 'Desserts', 'Specials'];
@@ -82,10 +88,16 @@ const MenuPage: React.FC = () => {
                         {filteredItems.slice(0, 4).map(item => (
                             <div key={item.id} className="menu-item-compact">
                                 <div className="menu-item-icon">
-                                    {item.category === 'Coffee' && '☕'}
-                                    {item.category === 'Shakes' && '🥤'}
-                                    {item.category === 'Desserts' && '🍰'}
-                                    {item.category === 'Specials' && '✨'}
+                                    {item.image ? (
+                                        <img src={item.image} alt={item.name} className="menu-item-image" />
+                                    ) : (
+                                        <>
+                                            {item.category === 'Coffee' && '☕'}
+                                            {item.category === 'Shakes' && '🥤'}
+                                            {item.category === 'Desserts' && '🍰'}
+                                            {item.category === 'Specials' && '✨'}
+                                        </>
+                                    )}
                                 </div>
                                 <div className="menu-item-info">
                                     <h3 className="menu-item-name">{item.name}</h3>
@@ -112,10 +124,16 @@ const MenuPage: React.FC = () => {
                                 className={`menu-featured-card ${index === 0 ? 'featured-primary' : 'featured-secondary'}`}
                             >
                                 <div className="featured-card-icon">
-                                    {item.category === 'Coffee' && '☕'}
-                                    {item.category === 'Shakes' && '🥤'}
-                                    {item.category === 'Desserts' && '🍰'}
-                                    {item.category === 'Specials' && '✨'}
+                                    {item.image ? (
+                                        <img src={item.image} alt={item.name} className="featured-card-image" />
+                                    ) : (
+                                        <>
+                                            {item.category === 'Coffee' && '☕'}
+                                            {item.category === 'Shakes' && '🥤'}
+                                            {item.category === 'Desserts' && '🍰'}
+                                            {item.category === 'Specials' && '✨'}
+                                        </>
+                                    )}
                                 </div>
                                 <h4 className="featured-card-name">{item.name}</h4>
                                 <p className="featured-card-desc">{item.description}</p>

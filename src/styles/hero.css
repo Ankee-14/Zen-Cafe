@@ -147,47 +147,10 @@
 
 /* Layered Glow Effects for Depth */
 .hero-product-glow {
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    z-index: 0;
-    pointer-events: none;
-}
-
-/* Primary cyan glow */
-.hero-product-glow::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle,
-            rgba(56, 182, 214, 0.2) 0%,
-            rgba(45, 130, 160, 0.12) 30%,
-            rgba(30, 80, 120, 0.06) 50%,
-            transparent 70%);
-    border-radius: 50%;
-    filter: blur(45px);
-}
-
-/* Secondary warm glow for product depth */
-.hero-product-glow::after {
-    content: '';
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 60%;
-    background: radial-gradient(ellipse,
-            rgba(196, 149, 106, 0.15) 0%,
-            rgba(160, 120, 80, 0.08) 40%,
-            transparent 70%);
-    border-radius: 50%;
-    filter: blur(50px);
+    opacity:0.6;
+    width: 360px;
+    height: 360px;
+    
 }
 
 /* Product Image Container - positioned to overflow */

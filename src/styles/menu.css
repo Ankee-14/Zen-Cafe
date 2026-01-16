@@ -136,6 +136,14 @@
     background: var(--glass-bg);
     border-radius: var(--radius-sm);
     flex-shrink: 0;
+    overflow: hidden;
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
 }
 
 .menu-item-info {
@@ -252,6 +260,20 @@
 .featured-card-icon {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-xs);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.featured-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
 }
 
 .featured-card-name {
