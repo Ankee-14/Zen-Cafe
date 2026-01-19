@@ -8,7 +8,21 @@ import MenuImage2 from '../assets/cappuccino.jpg';
 import MenuImage3 from '../assets/Caramel.jpg';
 import MenuImage4 from '../assets/coldbrew.jpg';
 
+
 import ShakeImage1 from '../assets/shake.jpg';
+import ShakeImage2 from '../assets/Vanilla Cream.jpg';
+import ShakeImage3 from '../assets/Strawberry Dream.jpg';
+import ShakeImage4 from '../assets/Oreo Blast.jpg'; 
+
+import DessertImage1 from '../assets/Tiramisu.jpg';
+import DessertImage2 from '../assets/cheesecake.jpg';
+import DessertImage3 from '../assets/brownie.jpg';
+import DessertImage4 from '../assets/cremebrulee.jpg';
+
+import SpecialImage1 from '../assets/zensignature.jpg';
+import SpecialImage2 from '../assets/matchalatte.jpg';
+import SpecialImage3 from '../assets/lavenderhoney.jpg';
+import SpecialImage4 from '../assets/affogato.jpg'; 
 
 type Category = 'Coffee' | 'Shakes' | 'Desserts' | 'Specials';
 
@@ -28,19 +42,19 @@ const menuItems: MenuItem[] = [
     { id: 4, name: 'Cold Brew', description: 'Slow-steeped for 24 hours, served chilled', category: 'Coffee', image: MenuImage4 },
     // Shakes
     { id: 7, name: 'Chocolate Shake', description: 'Rich Belgian chocolate blended creamy', category: 'Shakes', image: ShakeImage1 },
-    { id: 8, name: 'Vanilla Bean', description: 'Madagascar vanilla in a creamy swirl', category: 'Shakes', image: 'https://images.unsplash.com/photo-1553530666-ba2a8e36c6f4?w=200&h=200&fit=crop' },
-    { id: 9, name: 'Strawberry Dream', description: 'Fresh strawberries blended to perfection', category: 'Shakes', image: 'https://images.unsplash.com/photo-1568798839145-c28827b74a8f?w=200&h=200&fit=crop' },
-    { id: 10, name: 'Oreo Blast', description: 'Crushed Oreos in a creamy milkshake', category: 'Shakes', image: 'https://images.unsplash.com/photo-1579954614171-52a2c38c7c9b?w=200&h=200&fit=crop' },
+    { id: 8, name: 'Vanilla Bean', description: 'Madagascar vanilla in a creamy swirl', category: 'Shakes', image: ShakeImage2 },
+    { id: 9, name: 'Strawberry Dream', description: 'Fresh strawberries blended to perfection', category: 'Shakes', image: ShakeImage3 },
+    { id: 10, name: 'Oreo Blast', description: 'Crushed Oreos in a creamy milkshake', category: 'Shakes', image: ShakeImage4 },
     // Desserts
-    { id: 11, name: 'Tiramisu', description: 'Classic Italian layered coffee dessert', category: 'Desserts', image: 'https://images.unsplash.com/photo-1571115764595-644a007f0688?w=200&h=200&fit=crop' },
-    { id: 12, name: 'Cheesecake', description: 'New York style with berry compote', category: 'Desserts', image: 'https://images.unsplash.com/photo-1553134760-cd4628902467?w=200&h=200&fit=crop' },
-    { id: 13, name: 'Chocolate Brownie', description: 'Warm fudge brownie with ice cream', category: 'Desserts', image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=200&h=200&fit=crop' },
-    { id: 14, name: 'Creme Brulee', description: 'Caramelized custard, vanilla bean infused', category: 'Desserts', image: 'https://images.unsplash.com/photo-1470124266160-f8607ba8e38f?w=200&h=200&fit=crop' },
+    { id: 11, name: 'Tiramisu', description: 'Classic Italian layered coffee dessert', category: 'Desserts', image: DessertImage1 },
+    { id: 12, name: 'Cheesecake', description: 'New York style with berry compote', category: 'Desserts', image: DessertImage2 },
+    { id: 13, name: 'Chocolate Brownie', description: 'Warm fudge brownie with ice cream', category: 'Desserts', image: DessertImage3 },
+    { id: 14, name: 'Creme Brulee', description: 'Caramelized custard, vanilla bean infused', category: 'Desserts', image: DessertImage4 },
     // Specials
-    { id: 15, name: 'Zen Signature', description: 'Our secret blend with honey and spices', category: 'Specials', image: 'https://images.unsplash.com/photo-1537432376769-00f5c814b412?w=200&h=200&fit=crop' },
-    { id: 16, name: 'Matcha Latte', description: 'Premium Japanese green tea latte', category: 'Specials', image: 'https://images.unsplash.com/photo-1585518419759-fc0b0e86999a?w=200&h=200&fit=crop' },
-    { id: 17, name: 'Lavender Honey', description: 'Floral notes with natural honey sweetness', category: 'Specials', image: 'https://images.unsplash.com/photo-1577975080282-f4dccb496b60?w=200&h=200&fit=crop' },
-    { id: 18, name: 'Affogato', description: 'Espresso poured over vanilla gelato', category: 'Specials', image: 'https://images.unsplash.com/photo-1535920527078-e65faea4b9b9?w=200&h=200&fit=crop' },
+    { id: 15, name: 'Zen Signature', description: 'Our secret blend with honey and spices', category: 'Specials', image: SpecialImage1 },
+    { id: 16, name: 'Matcha Latte', description: 'Premium Japanese green tea latte', category: 'Specials', image: SpecialImage2 },
+    { id: 17, name: 'Lavender Honey', description: 'Floral notes with natural honey sweetness', category: 'Specials', image: SpecialImage3 },
+    { id: 18, name: 'Affogato', description: 'Espresso poured over vanilla gelato', category: 'Specials', image: SpecialImage4 },
 ];
 
 const categories: Category[] = ['Coffee', 'Shakes', 'Desserts', 'Specials'];

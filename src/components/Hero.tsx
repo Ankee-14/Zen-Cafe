@@ -10,21 +10,19 @@ const Hero: React.FC = () => {
             {/* Left Content */}
             <div className="hero-content">
                 <h1 className="hero-title">Zen Cafe</h1>
-                <p className="hero-subtitle">OUR OFF RE CCAES</p>
+                <p className="hero-subtitle"> Sip. Relax. Repeat. </p>
 
                 <p className="hero-description">
-                    Cof, ef tee o er prepenindimerd gelencrionn plerter seney treidensialey
-                    yolery sercurcated.cotes leefyticey seney holetivereys geten steindian wis
-                    keccole.tes poreent for tae taleutcer tee troperlefence telesteidens.
+                    From the first sip to the last moment, Zen Cafe is designed for comfort, balance, and calm.
                 </p>
 
                 {/* Category Tabs */}
                 <div className="hero-categories">
                     <button className="category-tab active">
-                        Bonis
+                        Coffee
                     </button>
                     <button className="category-tab category-tab--accent">
-                        Ccololois
+                        Desserts
                     </button>
                 </div>
 
@@ -54,7 +52,7 @@ const Hero: React.FC = () => {
                 {/* Footer */}
                 <div className="hero-footer">
                     <div className="hero-footer-logo">☕</div>
-                    <span className="hero-footer-text">Stees ore Mortider ohenpripleis</span>
+                    <span className="hero-footer-text">Serving Moments of Calm</span>
                 </div>
             </div>
 
