@@ -18,11 +18,11 @@
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
     font-weight: 700;
-    line-height: 1.05;
+    line-height: 1.1;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 
 .hero-subtitle {
@@ -38,7 +38,7 @@
     font-size: var(--font-size-xs);
     color: var(--text-muted);
     line-height: 1.6;
-    max-width: 380px;
+    max-width: 360px;
 }
 
 /* ===== Category Tabs (Bonis / Ccololois style) ===== */
@@ -101,7 +101,7 @@
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
-    padding: 10px 24px;
+    padding: 10px 22px;
     background: linear-gradient(135deg, var(--color-accent-cyan) 0%, var(--color-accent-teal) 100%);
     color: var(--color-bg-dark);
     font-size: var(--font-size-xs);
@@ -147,10 +147,10 @@
 
 /* Layered Glow Effects for Depth */
 .hero-product-glow {
-    opacity:0.6;
+    opacity: 0.6;
     width: 360px;
     height: 360px;
-    
+
 }
 
 /* Product Image Container - positioned to overflow */

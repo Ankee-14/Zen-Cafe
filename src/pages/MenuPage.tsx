@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import { useCart } from '../context/CartContext';
 import '../styles/menu.css';
 
 import MenuImage1 from '../assets/espresso.jpg';
@@ -12,7 +13,7 @@ import MenuImage4 from '../assets/coldbrew.jpg';
 import ShakeImage1 from '../assets/shake.jpg';
 import ShakeImage2 from '../assets/Vanilla Cream.jpg';
 import ShakeImage3 from '../assets/Strawberry Dream.jpg';
-import ShakeImage4 from '../assets/Oreo Blast.jpg'; 
+import ShakeImage4 from '../assets/Oreo Blast.jpg';
 
 import DessertImage1 from '../assets/Tiramisu.jpg';
 import DessertImage2 from '../assets/cheesecake.jpg';
@@ -22,7 +23,7 @@ import DessertImage4 from '../assets/cremebrulee.jpg';
 import SpecialImage1 from '../assets/zensignature.jpg';
 import SpecialImage2 from '../assets/matchalatte.jpg';
 import SpecialImage3 from '../assets/lavenderhoney.jpg';
-import SpecialImage4 from '../assets/affogato.jpg'; 
+import SpecialImage4 from '../assets/affogato.jpg';
 
 type Category = 'Coffee' | 'Shakes' | 'Desserts' | 'Specials';
 
@@ -61,8 +62,16 @@ const categories: Category[] = ['Coffee', 'Shakes', 'Desserts', 'Specials'];
 
 const MenuPage: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState<Category>('Coffee');
+    const [addedItemId, setAddedItemId] = useState<number | null>(null);
+    const { addToCart } = useCart();
 
     const filteredItems = menuItems.filter(item => item.category === activeCategory);
+
+    const handleAddToCart = (item: MenuItem) => {
+        addToCart(item);
+        setAddedItemId(item.id);
+        setTimeout(() => setAddedItemId(null), 800);
+    };
 
     return (
         <main className="glass-panel main-panel">
@@ -117,6 +126,21 @@ const MenuPage: React.FC = () => {
                                     <h3 className="menu-item-name">{item.name}</h3>
                                     <p className="menu-item-description">{item.description}</p>
                                 </div>
+                                <button
+                                    className={`menu-add-btn ${addedItemId === item.id ? 'added' : ''}`}
+                                    onClick={() => handleAddToCart(item)}
+                                    aria-label={`Add ${item.name} to order`}
+                                >
+                                    {addedItemId === item.id ? (
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    ) : (
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                                        </svg>
+                                    )}
+                                </button>
                             </div>
                         ))}
                     </div>
@@ -136,6 +160,8 @@ const MenuPage: React.FC = () => {
                             <div
                                 key={item.id}
                                 className={`menu-featured-card ${index === 0 ? 'featured-primary' : 'featured-secondary'}`}
+                                onClick={() => handleAddToCart(item)}
+                                style={{ cursor: 'pointer' }}
                             >
                                 <div className="featured-card-icon">
                                     {item.image ? (
@@ -151,6 +177,7 @@ const MenuPage: React.FC = () => {
                                 </div>
                                 <h4 className="featured-card-name">{item.name}</h4>
                                 <p className="featured-card-desc">{item.description}</p>
+                                <span className="featured-add-hint">Click to add</span>
                             </div>
                         ))}
                     </div>
@@ -161,3 +188,4 @@ const MenuPage: React.FC = () => {
 };
 
 export default MenuPage;
+

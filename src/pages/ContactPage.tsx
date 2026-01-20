@@ -69,7 +69,7 @@ const ContactPage: React.FC = () => {
                             </div>
                             <div className="detail-info">
                                 <h4>Phone</h4>
-                                <p>+1 (555) 123-4567</p>
+                                <p>+94 77 123 45 67</p>
                             </div>
                         </div>
 

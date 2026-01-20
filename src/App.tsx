@@ -1,14 +1,16 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 import Home from './pages/Home';
 import MenuPage from './pages/MenuPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import OrderReview from './components/OrderReview';
 import './styles/globals.css';
 
 const App: React.FC = () => {
   return (
-    <>
+    <CartProvider>
       {/* Background with gradient and wave shapes */}
       <div className="app-background">
         <div className="wave-shape wave-shape-1" />
@@ -27,7 +29,10 @@ const App: React.FC = () => {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
-    </>
+
+      {/* Order Review Modal */}
+      <OrderReview />
+    </CartProvider>
   );
 };
 

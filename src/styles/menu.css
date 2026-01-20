@@ -2,11 +2,58 @@
 
 .menu-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: var(--spacing-md);
     padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
     position: relative;
-    overflow: visible;
+    overflow: hidden;
+}
+
+/* ===== Floating Cart Button ===== */
+.menu-cart-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-accent-cyan) 0%, var(--color-accent-teal) 100%);
+    border: none;
+    color: var(--color-bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-glow-cyan), 0 8px 32px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    transition: all var(--transition-base);
+}
+
+.menu-cart-btn:hover {
+    transform: scale(1.1) translateY(-4px);
+}
+
+.menu-cart-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4757;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-bg-dark);
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.4);
 }
 
 /* ===== Menu Left Content (Matching Hero Content) ===== */
@@ -39,9 +86,9 @@
 
 .menu-title {
     font-family: var(--font-display);
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
     font-weight: 700;
-    line-height: 1.05;
+    line-height: 1.1;
     color: var(--text-primary);
     letter-spacing: -0.02em;
 }
@@ -59,7 +106,7 @@
     font-size: var(--font-size-xs);
     color: var(--text-muted);
     line-height: 1.6;
-    max-width: 380px;
+    max-width: 360px;
 }
 
 /* ===== Category Tabs (Matching Hero Tabs) ===== */
@@ -127,9 +174,9 @@
 }
 
 .menu-item-icon {
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
+    font-size: 1.4rem;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,6 +213,41 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    max-width: 100%;
+}
+
+.menu-add-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border-light);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    flex-shrink: 0;
+    align-self: center;
+    padding: 0;
+}
+
+.menu-add-btn:hover {
+    border-color: var(--color-accent-cyan);
+    color: var(--color-accent-cyan);
+    background: rgba(56, 182, 214, 0.1);
+}
+
+.menu-add-btn.added {
+    background: var(--color-accent-cyan);
+    border-color: var(--color-accent-cyan);
+    color: var(--color-bg-dark);
+}
+
+.menu-add-btn svg {
+    width: 16px;
+    height: 16px;
 }
 
 /* ===== Menu Footer (Matching Hero Footer) ===== */
@@ -288,6 +370,22 @@
     font-size: var(--font-size-xs);
     color: var(--text-muted);
     line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+}
+
+.featured-add-hint {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-accent-cyan);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    transition: opacity var(--transition-fast);
+}
+
+.menu-featured-card:hover .featured-add-hint {
+    opacity: 1;
 }
 
 /* ===== Responsive Styles (Matching Hero) ===== */
@@ -318,6 +416,24 @@
     .menu-description {
         max-width: 450px;
         font-size: var(--font-size-xs);
+    }
+
+    .menu-cart-btn {
+        width: 48px;
+        height: 48px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .menu-cart-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cart-badge {
+        width: 18px;
+        height: 18px;
+        font-size: 0.65rem;
     }
 
     .menu-categories {
@@ -398,6 +514,16 @@
     .menu-category-tab {
         padding: 4px 10px;
         font-size: 0.6rem;
+    }
+
+    .menu-add-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .menu-add-btn svg {
+        width: 14px;
+        height: 14px;
     }
 
     .menu-items-list {

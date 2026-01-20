@@ -41,26 +41,27 @@
     --radius-xl: 40px;
     --radius-pill: 50px;
 
-    /* Spacing */
+    /* Spacing - Balanced for readability without overflow */
     --spacing-xs: 8px;
     --spacing-sm: 12px;
-    --spacing-md: 20px;
-    --spacing-lg: 32px;
-    --spacing-xl: 48px;
-    --spacing-2xl: 64px;
+    --spacing-md: 18px;
+    --spacing-lg: 28px;
+    --spacing-xl: 40px;
+    --spacing-2xl: 56px;
 
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-display: 'Outfit', 'Inter', sans-serif;
 
-    --font-size-xs: 0.7rem;
-    --font-size-sm: 0.8rem;
+    /* Font Sizes - Moderately scaled for readability without overflow */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.85rem;
     --font-size-base: 0.95rem;
-    --font-size-lg: 1.1rem;
+    --font-size-lg: 1.15rem;
     --font-size-xl: 1.4rem;
     --font-size-2xl: 2rem;
-    --font-size-3xl: 2.75rem;
-    --font-size-hero: clamp(2.8rem, 5vw, 4rem);
+    --font-size-3xl: 2.6rem;
+    --font-size-hero: clamp(2.6rem, 4.5vw, 3.8rem);
 
     /* Transitions */
     --transition-fast: 0.15s ease;
@@ -91,7 +92,8 @@ body {
     background: var(--color-bg-dark);
     height: 100vh;
     overflow: hidden;
-    line-height: 1.6;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
 }
 
 /* ===== Background with Gradient & Flowing Waves ===== */
