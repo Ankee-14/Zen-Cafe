@@ -3,10 +3,11 @@
 .menu-section {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 
 /* ===== Floating Cart Button ===== */
@@ -60,8 +61,9 @@
 .menu-content {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
     padding-right: var(--spacing-sm);
+    height: 100%;
 }
 
 .menu-back-link {
@@ -105,8 +107,8 @@
 .menu-description {
     font-size: var(--font-size-xs);
     color: var(--text-muted);
-    line-height: 1.6;
-    max-width: 360px;
+    line-height: 1.5;
+    max-width: 380px;
 }
 
 /* ===== Category Tabs (Matching Hero Tabs) ===== */
@@ -151,8 +153,9 @@
 .menu-items-list {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-sm);
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-xs);
+    flex: 1;
 }
 
 .menu-item-compact {
@@ -254,8 +257,8 @@
 .menu-footer {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
-    padding-top: var(--spacing-lg);
+    gap: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
     margin-top: auto;
 }
 
@@ -281,7 +284,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 450px;
+    height: 100%;
+    min-height: 400px;
     overflow: visible;
 }
 
@@ -303,7 +307,7 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     width: 100%;
     max-width: 320px;
 }
@@ -340,10 +344,10 @@
 }
 
 .featured-card-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: var(--spacing-xs);
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
